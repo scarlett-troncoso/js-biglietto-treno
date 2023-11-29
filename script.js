@@ -14,8 +14,8 @@ console.log(user_eta)
 
 //Variabili risultati e sconti
 const result =  user_kilometri * kilometri_1 ; //risultato biglietto genérico
-const sconto_65 = 40 / result * 100 ; // calcolo sconto over 65
-const sconto_minori = 20 / result * 100 ; // calcolo sconto minoreni
+const sconto_65 = 0.4; // calcolo sconto over 65
+const sconto_minori = 0.2; // calcolo sconto minoreni
 const result_2 =  user_kilometri * kilometri_1 - sconto_65 ; //risultato over 65
 const result_3 =  user_kilometri * kilometri_1 - sconto_minori; //risultato minoreni
 
@@ -25,7 +25,7 @@ const result_3 =  user_kilometri * kilometri_1 - sconto_minori; //risultato mino
     
     // Stampa in pagina L'output del prezzo finale
     let prezzoElement = document.getElementById ('prezzo')
-    prezzo.innerHTML = 'Prezzo del Biglietto:', result;
+    prezzo.innerHTML = 'Prezzo del Biglietto:', result.toFixed(2);
 
     let prezzo_numeroElement = document.getElementById ('prezzo_numero')
     prezzo_numeroElement.innerHTML = result;
@@ -35,7 +35,7 @@ const result_3 =  user_kilometri * kilometri_1 - sconto_minori; //risultato mino
 
             // Stampa in pagina L'output del prezzo finale
             let prezzoElement = document.getElementById ('prezzo')
-            prezzo.innerHTML = 'Prezzo del Biglietto:', result_2;
+            prezzo.innerHTML = 'Prezzo del Biglietto:', result_2.toFixed(2);
         
             let prezzo_numeroElement = document.getElementById ('prezzo_numero')
             prezzo_numeroElement.innerHTML = result_2;
@@ -45,7 +45,7 @@ const result_3 =  user_kilometri * kilometri_1 - sconto_minori; //risultato mino
 
             // Stampa in pagina L'output del prezzo finale
             let prezzoElement = document.getElementById ('prezzo')
-            prezzo.innerHTML = 'Prezzo del Biglietto:', result_3;
+            prezzo.innerHTML = 'Prezzo del Biglietto:', result_3.toFixed(2);
         
             let prezzo_numeroElement = document.getElementById ('prezzo_numero')
             prezzo_numeroElement.innerHTML = result_3;
